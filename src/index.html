@@ -1,17 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/main.css">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/main.css" />
+    <link rel="stylesheet" href="/node_modules/boxicons/css/boxicons.min.css" />
+    <script type="module" src="/dist/jquery.js"></script>
+    <script type="module" src="./main.js"></script>
+    <title>Irhmdhn</title>
 </head>
 
-<body>
+<body class="bg-gray-200 dark:bg-gray-900 transition ease-in">
+    <img src="assets/blur.svg" alt=""
+        class="fixed -top-32 left-1/4 blur-3xl rotate-90 opacity-10 -z-50 animate-spin-slow" />
+    <img src="assets/blur-slow.svg" alt=""
+        class="fixed left-0 bottom-0 blur-3xl opacity-10 -z-50 animate-spin-slowly" />
+    <header
+        class="w-screen bg-gray-200 dark:bg-gray-900 sm:dark:bg-transparent fixed flex items-center justify-between p-6 sm:px-10 lg:py-11 lg:px-12 sm:bg-transparent z-20 transition ease-in">
+        <h4 class="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-gray-200 transition ease-in">
+            Irhmdhn
+        </h4>
+        <div class="flex gap-4 text-gray-400 dark:text-gray-600 text-2xl">
+            <span>
+                <i id="toggle-mode"
+                    class="bx bx-moon cursor-pointer dark:text-cyan-600 dark:hover:text-cyan-500 hover:text-cyan-600 transition ease-in"></i>
+            </span>
+            <!-- <span class="sm:hidden">
+                <i id="nav-menu" class='bx bx-menu-alt-right cursor-pointer hover:text-cyan-600 transition'></i>
+            </span> -->
+            <!-- <BiAdjust class="cursor-pointer text-gray-400 hover:text-cyan-600 transition" /> -->
+            <!-- <CgMenuRight onClick={showNav}
+                class="sm:hidden cursor-pointer text-gray-400 hover:text-cyan-600 transition" /> -->
+        </div>
+        <!-- <i class='bx bx-moon ' title="Dark Mode"></i> -->
+        <!-- <i class='bx bx-sun text-gray-200 cursor-pointer me-4 hover:text-cyan-600 transition' title="Dark Mode"></i> -->
+    </header>
 
-    <h1 class="text-red-600">Test</h1>
-
+    <nav id="navigation"
+        class="sm:min-h-screen w-[calc(100vw-2rem)] sm:w-screen bg-gray-100 dark:bg-gray-800/50 sm:bg-transparent sm:dark:bg-transparent text-gray-400 dark:text-cyan-600 fixed bottom-0 inset-x-0 z-50 sm:z-10 flex justify-between items-center flex-col sm:flex-row px-6 py-3 sm:p-0 mb-3 mx-auto sm:m-0 rounded-full shadow-sm transition ease-in">
+        <aside id="nav-left" class="hidden sm:block order-last sm:order-first sm:px-10 lg:px-12">
+            <ul class="flex justify-around flex-col gap-2"></ul>
+        </aside>
+        <aside id="nav-right" class="w-full sm:w-auto sm:px-10 lg:px-12">
+            <ul class="flex justify-around flex-row sm:flex-col gap-2"></ul>
+        </aside>
+    </nav>
+    <!-- <nav id="navigation"
+        class="fixed flex flex-col sm:flex-row justify-between items-center right-0 h-[calc(100vh-5rem) sm:min-h-screen w-fit sm:w-screen text-gray-400 dark:text-gray-600 bg-white rounded-s-xl sm:bg-transparent pt-4 pb-24 px-4 sm:p-0 bottom-0 transition ease-in translate-x-48 sm:translate-x-0 z-50 sm:z-10">
+        <aside id="nav-left" class="order-last sm:order-first sm:px-10 lg:px-12">
+            <ul class="flex sm:block sm:space-y-6"></ul>
+        </aside>
+        <aside id="nav-right" class="sm:px-10 lg:px-12">
+            <ul class="space-y-6"></ul>
+        </aside>
+    </nav> -->
+    <!-- mx-6 sm:mx-32 md:mx-44 lg:mx-56 -->
+    <main class="relative sm:z-40 mx-6 sm:mx-32 md:mx-44 lg:mx-56">
+        <section id="home" class="text-center flex items-center min-h-screen md:text-justify">
+            <div class="flex flex-col-reverse items-center w-full md:flex-row">
+                <div class="iama flex-1 mt-4 md:mt-0">
+                    <h1
+                        class="text-gray-900 dark:text-gray-200 text-3xl md:max-w-xs md:text-5xl lg:text-6xl font-semibold">
+                        Ihwannudin
+                        <span class="text-cyan-600">Ra</span>h<span class="text-cyan-600">ma</span>dhani
+                    </h1>
+                    <h4 class="text-gray-900 dark:text-gray-200 text-xl md:text-2xl font-semibold my-3 md:my-6">
+                        Web Dev<span class="text-cyan-600 mx-2">|</span>
+                        UI/UX
+                    </h4>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                        <button class="btn-primary">Hubungi saya</button>
+                        <a href="#" class="btn-link"><span>Lihat CV</span></a>
+                    </div>
+                </div>
+                <div class="itsme relative md:absolute md:left-[60%] lg:static">
+                    <img src="assets/back-profile.svg"
+                        class="absolute bottom-0 md:bottom-1/4 -z-10 md:w-72 animate-spin-slow" />
+                    <img src="assets/back-profile.svg" class="absolute top-1/4 -z-10 md:w-72 animate-spin-slowly" />
+                    <img src="assets/profile.png" alt="a" class="w-48 lg:w-auto" />
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- <nav class="min-h-screen w-screen fixed sm:flex justify-between items-center z-10">
+        <aside id="nav-left" class="sm:h-auto sm:z-40 transition-transform  sm:flex items-center">
+            <ul class="sm:flex flex-col gap-8 text-gray-400 sm:mx-10 lg:mx-12">
+            </ul>
+        </aside>
+        <aside id="nav-right"
+            class="h-screen sm:h-auto sm:z-40 translate-x-48 transition-transform sm:translate-x-0 sm:flex items-center">
+            <ul
+                class="flex w-36 flex-col h-screen sm:h-auto bg-white overflow-x-hidden gap-4 text-gray-400 my-20 p-4 rounded-l-xl sm:mx-10 sm:w-auto sm:min-h-min sm:bg-transparent sm:overflow-x-visible sm:p-0 sm:gap-8 lg:mx-12">
+            </ul>
+        </aside>
+    </nav> -->
 </body>
 
 </html>
