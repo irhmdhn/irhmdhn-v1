@@ -39,11 +39,6 @@
   );
 }
 
-// $('#nav-menu').on('click',()=>{
-//     $('#nav-menu').toggleClass('bx-menu-alt-right bx-x')
-//     $('#navigation').toggleClass('translate-x-48')
-// })
-
 $("#toggle-mode").on("click", () => {
   $("html").toggleClass("dark");
   $("#toggle-mode").toggleClass("bx-moon bx-sun");
