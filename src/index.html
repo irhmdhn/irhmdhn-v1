@@ -1,100 +1,514 @@
 <!doctype html>
-<html lang="en" class="">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/logo/logo.svg">
     <link rel="stylesheet" href="/dist/main.css" />
     <link rel="stylesheet" href="/node_modules/boxicons/css/boxicons.min.css" />
+    <!-- <link rel="stylesheet" href="/node_modules/aos/dist/aos.css" /> -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <script type="module" src="/dist/jquery.js"></script>
-    <script type="module" src="./main.js"></script>
     <title>Irhmdhn</title>
 </head>
 
-<body class="bg-gray-200 dark:bg-gray-900 transition ease-in">
-    <img src="assets/blur.svg" alt=""
+<body class="bg-gray-200 dark:bg-gray-900 text-gray-900 dark:text-gray-200 transition ease-in">
+    <img src="/assets/other/blur.svg" alt="blur"
         class="fixed -top-32 left-1/4 blur-3xl rotate-90 opacity-10 -z-50 animate-spin-slow" />
-    <img src="assets/blur-slow.svg" alt=""
+    <img src="/assets/other/blur-slow.svg" alt="blur"
         class="fixed left-0 bottom-0 blur-3xl opacity-10 -z-50 animate-spin-slowly" />
     <header
-        class="w-screen bg-gray-200 dark:bg-gray-900 sm:dark:bg-transparent fixed flex items-center justify-between p-6 sm:px-10 lg:py-11 lg:px-12 sm:bg-transparent z-20 transition ease-in">
-        <h4 class="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-gray-200 transition ease-in">
-            Irhmdhn
-        </h4>
-        <div class="flex gap-4 text-gray-400 dark:text-gray-600 text-2xl">
-            <span>
-                <i id="toggle-mode"
-                    class="bx bx-moon cursor-pointer dark:text-cyan-600 dark:hover:text-cyan-500 hover:text-cyan-600 transition ease-in"></i>
-            </span>
-            <!-- <span class="sm:hidden">
-                <i id="nav-menu" class='bx bx-menu-alt-right cursor-pointer hover:text-cyan-600 transition'></i>
-            </span> -->
-            <!-- <BiAdjust class="cursor-pointer text-gray-400 hover:text-cyan-600 transition" /> -->
-            <!-- <CgMenuRight onClick={showNav}
-                class="sm:hidden cursor-pointer text-gray-400 hover:text-cyan-600 transition" /> -->
-        </div>
-        <!-- <i class='bx bx-moon ' title="Dark Mode"></i> -->
-        <!-- <i class='bx bx-sun text-gray-200 cursor-pointer me-4 hover:text-cyan-600 transition' title="Dark Mode"></i> -->
+        class="w-screen bg-gray-200/75 sm:bg-transparent dark:bg-gray-900/75 sm:dark:bg-transparent fixed flex items-center justify-between px-6 py-3 sm:px-10 lg:py-11 lg:px-12 z-20 backdrop-blur sm:backdrop-blur-none transition ease-in">
+        <a href="#home"><img src="/assets/logo/logo.svg" alt="Irhmdhn Logo" title="Irhmdhn Logo"
+                class="h-8 hover:scale-110 hover:rotate-12 active:-rotate-180 transition"></a>
+
+        <i id="toggle-mode"
+            class="bx bx-moon text-gray-400 text-2xl cursor-pointer dark:text-cyan-600 dark:hover:text-cyan-500 hover:text-cyan-600 transition ease-in">
+        </i>
+
     </header>
 
-    <nav id="navigation"
-        class="sm:min-h-screen w-[calc(100vw-2rem)] sm:w-screen bg-gray-100 dark:bg-gray-800/50 sm:bg-transparent sm:dark:bg-transparent text-gray-400 dark:text-cyan-600 fixed bottom-0 inset-x-0 z-50 sm:z-10 flex justify-between items-center flex-col sm:flex-row px-6 py-3 sm:p-0 mb-3 mx-auto sm:m-0 rounded-full shadow-sm transition ease-in">
-        <aside id="nav-left" class="hidden sm:block order-last sm:order-first sm:px-10 lg:px-12">
-            <ul class="flex justify-around flex-col gap-2"></ul>
-        </aside>
-        <aside id="nav-right" class="w-full sm:w-auto sm:px-10 lg:px-12">
-            <ul class="flex justify-around flex-row sm:flex-col gap-2"></ul>
-        </aside>
-    </nav>
-    <!-- <nav id="navigation"
-        class="fixed flex flex-col sm:flex-row justify-between items-center right-0 h-[calc(100vh-5rem) sm:min-h-screen w-fit sm:w-screen text-gray-400 dark:text-gray-600 bg-white rounded-s-xl sm:bg-transparent pt-4 pb-24 px-4 sm:p-0 bottom-0 transition ease-in translate-x-48 sm:translate-x-0 z-50 sm:z-10">
-        <aside id="nav-left" class="order-last sm:order-first sm:px-10 lg:px-12">
-            <ul class="flex sm:block sm:space-y-6"></ul>
-        </aside>
-        <aside id="nav-right" class="sm:px-10 lg:px-12">
-            <ul class="space-y-6"></ul>
-        </aside>
-    </nav> -->
-    <!-- mx-6 sm:mx-32 md:mx-44 lg:mx-56 -->
-    <main class="relative sm:z-40 mx-6 sm:mx-32 md:mx-44 lg:mx-56">
-        <section id="home" class="text-center flex items-center min-h-screen md:text-justify">
-            <div class="flex flex-col-reverse items-center w-full md:flex-row">
-                <div class="iama flex-1 mt-4 md:mt-0">
+
+    <aside id="nav-left"
+        class="hidden sm:block text-gray-400 dark:text-cyan-600 sm:fixed top-1/2 -translate-y-1/2 left-0 z-20 order-last sm:order-first sm:mx-10 lg:mx-12">
+        <ul class="flex justify-around flex-col gap-6">
+            <li class='group w-16 sm:w-auto'>
+                <a href="https://www.instagram.com/irhmdhn/" target='_blank'
+                    class='w-fit sm:w-auto hover:text-cyan-600 dark:hover:text-gray-200 cursor-pointer flex flex-col items-center sm:flex-row-reverse mx-auto transition'>
+                    <i class='bx bxl-instagram rounded text-2xl'></i>
+                    <span
+                        class='hidden sm:block sm:scale-0 text-md sm:absolute sm:opacity-0 sm:left-0 group-hover:opacity-100 group-hover:scale-100 group-hover:left-8 transition-all ease-in-out'>
+                        Instagram
+                    </span>
+                </a>
+            </li>
+            <li class='group w-16 sm:w-auto'>
+                <a href="https://www.linkedin.com/in/ihwannudin-rahmadhani-097776288/" target='_blank'
+                    class='w-fit sm:w-auto hover:text-cyan-600 dark:hover:text-gray-200 cursor-pointer flex flex-col items-center sm:flex-row-reverse mx-auto transition'>
+                    <i class='bx bxl-linkedin rounded text-2xl'></i>
+                    <span
+                        class='hidden sm:block sm:scale-0 text-md sm:absolute sm:opacity-0 sm:left-0 group-hover:opacity-100 group-hover:scale-100 group-hover:left-8 transition-all ease-in-out'>
+                        Linkedin
+                    </span>
+                </a>
+            </li>
+            <li class='group w-16 sm:w-auto'>
+                <a href="https://github.com/irhmdhn" target='_blank'
+                    class='w-fit sm:w-auto hover:text-cyan-600 dark:hover:text-gray-200 cursor-pointer flex flex-col items-center sm:flex-row-reverse mx-auto transition'>
+                    <i class='bx bxl-github rounded text-2xl'></i>
+                    <span
+                        class='hidden sm:block sm:scale-0 text-md sm:absolute sm:opacity-0 sm:left-0 group-hover:opacity-100 group-hover:scale-100 group-hover:left-8 transition-all ease-in-out'>
+                        Github
+                    </span>
+                </a>
+            </li>
+            <li class='group w-16 sm:w-auto'>
+                <a href="mailto:irhmdhn.me@gmail.com" target='_blank'
+                    class='w-fit sm:w-auto hover:text-cyan-600 dark:hover:text-gray-200 cursor-pointer flex flex-col items-center sm:flex-row-reverse mx-auto transition'>
+                    <i class='bx bx-envelope rounded text-2xl'></i>
+                    <span
+                        class='hidden sm:block sm:scale-0 text-md sm:absolute sm:opacity-0 sm:left-0 group-hover:opacity-100 group-hover:scale-100 group-hover:left-8 transition-all ease-in-out'>
+                        Email
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <aside id="nav-right"
+        class="bg-gray-100/75 dark:bg-gray-800/75 sm:bg-transparent dark:sm:bg-transparent text-gray-400 dark:text-cyan-500 w-[calc(100vw-2rem)] sm:w-auto inset-x-0 sm:inset-auto fixed bottom-0 sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2 sm:right-0 z-20 sm:mx-10 lg:mx-12 mx-auto mb-3 sm:mb-0 rounded-full backdrop-blur sm:backdrop-blur-none">
+        <ul class="flex justify-around flex-row sm:flex-col sm:gap-6 py-3 sm:p-0">
+            <li class='group w-16 sm:w-fit'>
+                <a href='#home' class='nav-link'>
+                    <i
+                        class='bx bx-home-alt rounded text-2xl text-cyan-600 dark:text-gray-200 border-cyan-600 sm:border-none p-1 sm:p-0'></i>
+                    <span
+                        class='hidden sm:block sm:scale-0 text-md sm:absolute sm:opacity-0 sm:right-0 group-hover:opacity-100 group-hover:scale-100 group-hover:right-8 transition-all ease-in-out'>
+                        Beranda
+                    </span>
+                </a>
+            </li>
+            <li class='group w-16 sm:w-fit'>
+                <a href='#portfolio' class='nav-link'>
+                    <i class='bx bx-network-chart rounded text-2xl border-cyan-600 sm:border-none p-1 sm:p-0'></i>
+                    <span
+                        class='hidden sm:block sm:scale-0 text-md sm:absolute sm:opacity-0 sm:right-0 group-hover:opacity-100 group-hover:scale-100 group-hover:right-8 transition-all ease-in-out'>
+                        Porfolio
+                    </span>
+                </a>
+            </li>
+            <li class='group w-16 sm:w-fit'>
+                <a href='#about-me' class='nav-link'>
+                    <i class='bx bx-wink-smile rounded text-2xl border-cyan-600 sm:border-none p-1 sm:p-0'></i>
+                    <span
+                        class='hidden sm:block sm:scale-0 text-md sm:absolute sm:opacity-0 sm:right-0 group-hover:opacity-100 group-hover:scale-100 group-hover:right-8 transition-all ease-in-out'>
+                        Saya
+                    </span>
+                </a>
+            </li>
+            <li class='group w-16 sm:w-fit'>
+                <a href='#contact' class='nav-link'>
+                    <i class='bx bx-user-pin rounded text-2xl border-cyan-600 sm:border-none p-1 sm:p-0'></i>
+                    <span
+                        class='hidden sm:block sm:scale-0 text-md sm:absolute sm:opacity-0 sm:right-0 group-hover:opacity-100 group-hover:scale-100 group-hover:right-8 transition-all ease-in-out'>
+                        Kontak
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <main
+        class=" h-screen max-w-screen relative px-6 sm:px-32 md:px-44 lg:px-56 md:snap-y snap-proximity overflow-y-scroll scroll-smooth">
+        <section id="home" class="min-h-screen flex items-center snap-start" data-aos="fade-down">
+            <div class="flex items-center w-full relative">
+                <div class="iama flex-1 mt-4 md:mt-0 text-left sm:text-center">
                     <h1
-                        class="text-gray-900 dark:text-gray-200 text-3xl md:max-w-xs md:text-5xl lg:text-6xl font-semibold">
-                        Ihwannudin
-                        <span class="text-cyan-600">Ra</span>h<span class="text-cyan-600">ma</span>dhani
+                        class="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold my-5 text-transparent bg-clip-text bg-gradient-to-br from-cyan-900 to-cyan-600">
+                        UI DESIGNER, <br>
+                        WEB DEVELOPER
                     </h1>
-                    <h4 class="text-gray-900 dark:text-gray-200 text-xl md:text-2xl font-semibold my-3 md:my-6">
-                        Web Dev<span class="text-cyan-600 mx-2">|</span>
-                        UI/UX
-                    </h4>
-                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                        <button class="btn-primary">Hubungi saya</button>
-                        <a href="#" class="btn-link"><span>Lihat CV</span></a>
+                    <h3 class="text-xl md:text-2xl font-semibold">
+                        Ihwannudin Rahmadhani - <span class="text-cyan-600">Rama</span>
+                    </h3>
+                    <p class="text-sm lg:text-base my-5 text-left sm:text-center leading-6 mx-auto lg:max-w-3xl">Saya
+                        adalah <span class="text-cyan-600 font-semibold">mahasiswa</span>
+                        yang
+                        memiliki minat
+                        dan bakat di bidang <span class="text-cyan-600 font-semibold">Web Development
+                            dan UI Designer</span>, saya memiliki
+                        pengetahuan dan keterampilan dasar dalam membuat tampilan yang interaktif, atraktif dan user
+                        friendly.</p>
+                    <div class="flex flex-wrap justify-start sm:justify-center gap-4">
+                        <a href="#contact" class="btn-primary" data-aos="fade-up-right">Hubungi saya</a>
+                        <a href="#" class="btn-link" data-aos="fade-up-left"><span>Lihat CV</span></a>
                     </div>
-                </div>
-                <div class="itsme relative md:absolute md:left-[60%] lg:static">
-                    <img src="assets/back-profile.svg"
-                        class="absolute bottom-0 md:bottom-1/4 -z-10 md:w-72 animate-spin-slow" />
-                    <img src="assets/back-profile.svg" class="absolute top-1/4 -z-10 md:w-72 animate-spin-slowly" />
-                    <img src="assets/profile.png" alt="a" class="w-48 lg:w-auto" />
+
                 </div>
             </div>
         </section>
+
+        <section id="portfolio" class="min-h-screen flex items-center snap-start">
+            <div class="container h-auto">
+                <div class="text-center mb-6">
+                    <h2 class="text-4xl font-semibold text-cyan-600 mb-3">Portofolio</h2>
+                    <p class="text-secondary">Berikut project yang saya buat selama perkuliahan 🎨</p>
+                </div>
+                <div class="flex gap-4 overflow-x-auto snap-x py-3">
+
+                    <div
+                        class="group max-w-xs flex-shrink-0 snap-start overflow-hidden bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800/75 dark:border-gray-700 transition">
+
+                        <img class="max-h-52 mx-auto" src="/assets/img/lms.webp" alt="LMS AMIKOM" title="LMS AMIKOM" />
+
+                        <div class="p-4">
+
+                            <h5 class="mb-2 text-xl font-bold tracking-tight">
+                                Recreate LMS AMIKOM
+                            </h5>
+
+                            <p class="mb-3 text-secondary">Sistem pengelola pembelajaran
+                                Universitas AMIKOM (Final Project)
+                            </p>
+                            <div class="flex justify-between">
+                                <div class="flex gap-2">
+                                    <img src="/assets/logo/bootstrap.svg" alt="Bootstrap" title="Bootstrap">
+                                    <img src="/assets/logo/codeigniter.svg" alt="Codeigniter" title="Codeigniter 4">
+                                    <img src="/assets/logo/mysql.svg" alt="MySql" title="MySql">
+                                </div>
+                                <a href="" class="btn-primary-outline-sm flex items-center"><span>Github</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group max-w-xs flex-shrink-0 snap-start overflow-hidden bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800/75 dark:border-gray-700 transition">
+                        <a href="#" class="relative">
+                            <div
+                                class="view opacity-0 bg-gray-900/0 group-hover:bg-gray-900/75 group-hover:opacity-100 absolute inset-0 grid place-items-center transition">
+                                <button class="btn-secondary-outline">Github</button>
+                            </div>
+                            <img class="max-h-52 mx-auto" src="/assets/img/topap.webp" alt="Website Top Up (TOPAP)"
+                                title="Website Top Up (TOPAP)" />
+                        </a>
+                        <div class="p-4">
+
+                            <h5 class="mb-2 text-xl font-bold tracking-tight">
+                                Website Top Up (TOPAP)
+                            </h5>
+
+                            <p class="mb-3 text-secondary">Sistem CRUD website pengisian game (Final
+                                Project)
+                            </p>
+                            <div class="flex gap-2">
+                                <img src="/assets/logo/bootstrap.svg" alt="Bootstrap" title="Bootstrap">
+                                <img src="/assets/logo/laravel.svg" alt="Laravel" title="Laravel">
+                                <img src="/assets/logo/mysql.svg" alt="MySql" title="MySql">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group max-w-xs flex-shrink-0 snap-start overflow-hidden bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800/75 dark:border-gray-700 transition">
+                        <a href="#" class="relative">
+                            <div
+                                class="view opacity-0 bg-gray-900/0 group-hover:bg-gray-900/75 group-hover:opacity-100 absolute inset-0 grid place-items-center transition">
+                                <button class="btn-secondary-outline">Github</button>
+                            </div>
+                            <img class="max-h-52 mx-auto" src="/assets/img/uefa.webp" alt="UEFA Squad List"
+                                title="UEFA Squad List" />
+                        </a>
+                        <div class="p-4">
+
+                            <h5 class="mb-2 text-xl font-bold tracking-tight">
+                                UEFA Squad List
+                            </h5>
+
+                            <p class="mb-3 text-secondary">List tim dan jadwal di liga EUFA (Final
+                                Project Hybrid Web)
+                            </p>
+                            <div class="flex gap-2">
+                                <img src="/assets/logo/angular.svg" alt="Angular" title="Angular">
+                                <img src="/assets/logo/ionic.svg" alt="Ionic" title="Ionic">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group max-w-xs flex-shrink-0 snap-start overflow-hidden bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800/75 dark:border-gray-700 transition">
+                        <a href="#" class="relative">
+                            <div
+                                class="view opacity-0 bg-gray-900/0 group-hover:bg-gray-900/75 group-hover:opacity-100 absolute inset-0 grid place-items-center transition">
+                                <button class="btn-secondary-outline">Figma</button>
+                            </div>
+                            <img class="max-h-52 mx-auto" src="/assets/img/doneat.webp" alt="Doneat" title="Doneat" />
+                        </a>
+                        <div class="p-4">
+
+                            <h5 class="mb-2 text-xl font-bold tracking-tight">
+                                Doneat
+                            </h5>
+
+                            <p class="mb-3 text-secondary">Design aplikasi donasi untuk
+                                mengatasi kelaparan (Final Project)
+                            </p>
+                            <div class="flex gap-2">
+                                <img src="/assets/logo/figma.svg" alt="Figma" title="Figma">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="about-me" class="min-h-screen flex items-center snap-start">
+            <div class="container text-center h-auto">
+                <div class="text-center mb-6">
+                    <h2 class="text-4xl font-semibold text-cyan-600 mb-3">Tentang Saya</h2>
+                    <p class="text-secondary">Penjelasan singkat tentang pengalaman saya 🦸‍♂️</p>
+                </div>
+
+                <article class="text-start">
+                    <div class="flex flex-col sm:flex-row sm:gap-5 lg:gap-12 my-6">
+                        <div id="tab" class="w-full min-h-max">
+                            <ul class="flex flex-wrap justify-center sm:gap-3 text-base lg:text-md font-semibold text-center mb-6"
+                                id="myTab">
+                                <li class="mr-2 border-b-2 border-cyan-600 text-cyan-600" data-id='skills'>
+                                    <button class="inline-block p-2 hover:text-cyan-500" type="button">
+                                        Kemampuan
+                                    </button>
+                                </li>
+                                <li class="mr-2 border-b-2 border-transparent" data-id='educations'>
+                                    <button class="inline-block p-2 hover:text-cyan-500" type="button">
+                                        Edukasi
+                                    </button>
+                                </li>
+                                <li class="mr-2 border-b-2 border-transparent" data-id='certificate'>
+                                    <button class="inline-block p-2 hover:text-cyan-500" type="button">
+                                        Sertifikat
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content my-3" data-content='skills'>
+                                <div
+                                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center md:justify-items-stretch gap-6">
+
+                                    <div
+                                        class="w-full lg:w-auto flex flex-col items-center md:items-center gap-1 border border-gray-400 dark:border-gray-600 dark:hover:bg-gray-800 p-8 rounded-lg transition">
+                                        <div class="flex gap-3">
+                                            <img src="/assets/logo/bootstrap.svg" alt="Bootstrap" title="Bootstrap"
+                                                class="hover:scale-125 transition">
+                                            <img src="/assets/logo/tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS"
+                                                class="hover:scale-125 transition">
+                                        </div>
+                                        <h4 class="text-lg lg:text-xl font-semibold">
+                                            Front-End
+                                        </h4>
+                                        <p class="text-secondary">
+                                            Web Developer
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="w-full lg:w-auto flex flex-col items-center md:items-center gap-1 border border-gray-400 dark:border-gray-600 dark:hover:bg-gray-800 p-8 rounded-lg transition">
+                                        <div class="flex gap-3">
+                                            <img src="/assets/logo/codeigniter.svg" alt="Codeigniter"
+                                                title="Codeigniter" class="hover:scale-125 transition">
+                                            <img src="/assets/logo/laravel.svg" alt="Laravel" title="Laravel"
+                                                class="hover:scale-125 transition">
+                                        </div>
+                                        <h4 class="text-lg lg:text-xl font-semibold">
+                                            Back-End
+                                        </h4>
+                                        <p class="text-secondary">
+                                            Web Developer
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="w-full lg:w-auto flex flex-col items-center md:items-center gap-1 border border-gray-400 dark:border-gray-600 dark:hover:bg-gray-800 p-8 rounded-lg transition">
+                                        <div class="flex">
+                                            <img src="/assets/logo/figma.svg" alt="Figma" title="Figma"
+                                                class="hover:scale-125 transition">
+                                        </div>
+                                        <h4 class="text-lg lg:text-xl font-semibold">
+                                            UI Designer
+                                        </h4>
+                                        <p class="text-secondary">
+                                            Web/Mobile app
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-content hidden my-3" data-content='educations'>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                    <div
+                                        class="flex flex-row items-center md:items-center gap-3 border border-gray-400 dark:border-gray-600 hover:bg-gray-300 dark:hover:bg-gray-800 p-8 md:p-3 lg:p-8 rounded-lg transition">
+                                        <img class="object-cover w-9" src="/assets/logo/smk.webp" title="SMKN 1 Ponjong"
+                                            alt="SMKN 1 Ponjong">
+                                        <div class="flex flex-col justify-between">
+                                            <p class="text-sm font-semibold">
+                                                2018 - 2020
+                                            </p>
+                                            <h4 class="text-lg lg:text-xl font-semibold">
+                                                SMK Negeri 1 Ponjong
+                                            </h4>
+                                            <p class="text-secondary">
+                                                Multimedia
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex flex-row items-center md:items-center gap-3 border border-gray-400 dark:border-gray-600 hover:bg-gray-300 dark:hover:bg-gray-800 p-8 md:p-3 lg:p-8 rounded-lg transition">
+                                        <img class="object-cover w-9" src="/assets/logo/amikom.webp"
+                                            title="Universitas AMIKOM Yogyakarta" alt="Universitas AMIKOM Yogyakarta">
+                                        <div class="flex flex-col justify-between">
+                                            <p class="text-sm font-semibold">
+                                                2021 - Sekarang
+                                            </p>
+                                            <h4 class="text-lg lg:text-xl font-semibold">
+                                                Universitas AMIKOM Yogyakarta
+                                            </h4>
+                                            <p class="text-secondary">
+                                                D3 Teknik Informatika
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-content hidden" data-content='certificate'>
+                                <div class="border border-gray-400 dark:border-gray-600 my-3 rounded-lg">
+                                    <div class="relative flex flex-col p-3 lg:p-8 gap-2">
+
+                                        <div class="flex items-center gap-3">
+                                            <img class="object-cover w-9" src="/assets/logo/digitalent.png"
+                                                alt="Digitalent" title="Digitalent">
+                                            <div class="flex flex-col justify-between">
+                                                <p class="text-sm font-semibold">
+                                                    Juli - September 2022
+                                                </p>
+                                                <h4 class="text-lg lg:text-xl font-semibold">
+                                                    (BNSP) KOMINFO - Digitalent
+                                                </h4>
+                                                <p class="text-xs lg:text-base text-gray-600 dark:text-gray-400">
+                                                    VSGA - Junior Web Developer
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <h6 class="font-semibold">Unit kompetensi</h6>
+                                        <ul class="list-disc list-outside ps-4">
+                                            <li>Mengimplementasikan User Interface</li>
+                                            <li>Menerepkan perintah eksekusi bahasa pemrograman berbasis teks,
+                                                grafis, multimedia</li>
+                                            <li>
+                                                Menulis fungsi, file atau sumber data pemrograman yang lain dalam
+                                                organisasi yang rapi</li>
+                                            <li>
+                                                Menulis kode dengan prinsip sesuai guidelines dan best practices
+                                            </li>
+                                            <li>Menggunakan library atau komponen pre-existing</li>
+                                        </ul>
+                                        <button id="open" class="ms-auto sm:absolute top-3 right-3 btn-primary-outline">
+                                            <span>Lihat</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="contact" class="min-h-screen flex items-center snap-start">
+            <div class='w-full'>
+
+                <div class="text-center mb-6">
+                    <h2 class="text-4xl font-semibold text-cyan-600 mb-3">Kontak</h2>
+                    <p class="text-secondary">Kirimkan saya pesan dari anda 😊</p>
+                </div>
+                <form action="#" method="POST" class="mx-auto xl:px-36 mt-6">
+                    <div class="grid grid-cols-1 gap-x-4 gap-y-2 md:grid-cols-2">
+                        <div>
+                            <label for="name" htmlFor="name" class="block text-sm font-semibold">
+                                Nama
+                            </label>
+                            <div>
+                                <input type="text" name="name" id="name" autoComplete="name"
+                                    class="block w-full rounded-md border-0 px-3 py-2 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition" />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" htmlFor="email" class="block text-sm font-semibold">
+                                Email
+                            </label>
+                            <div>
+                                <input type="email" name="email" id="email" autoComplete="email"
+                                    class="block w-full rounded-md border-0 px-3 py-2 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition" />
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="subject" htmlFor="subject" class="block text-sm font-semibold">
+                                Subjek
+                            </label>
+                            <div>
+                                <input type="text" name="subject" id="subject" autoComplete="subject"
+                                    class="block w-full rounded-md border-0 px-3 py-2 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition" />
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="message" htmlFor=" message" class="block text-sm font-semibold">
+                                Pesan
+                            </label>
+                            <div>
+                                <textarea name="message" id="message" rows=3
+                                    class="block w-full rounded-md border-0 px-3 py-2 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition">
+                                </textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="mt-10">
+                        <button type="submit" class="btn-primary">
+                            Kirim
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer class="text-center my-3">
+            Copyright &copy; 2023 irhmdhn
+        </footer>
+
+
     </main>
-    <!-- <nav class="min-h-screen w-screen fixed sm:flex justify-between items-center z-10">
-        <aside id="nav-left" class="sm:h-auto sm:z-40 transition-transform  sm:flex items-center">
-            <ul class="sm:flex flex-col gap-8 text-gray-400 sm:mx-10 lg:mx-12">
-            </ul>
-        </aside>
-        <aside id="nav-right"
-            class="h-screen sm:h-auto sm:z-40 translate-x-48 transition-transform sm:translate-x-0 sm:flex items-center">
-            <ul
-                class="flex w-36 flex-col h-screen sm:h-auto bg-white overflow-x-hidden gap-4 text-gray-400 my-20 p-4 rounded-l-xl sm:mx-10 sm:w-auto sm:min-h-min sm:bg-transparent sm:overflow-x-visible sm:p-0 sm:gap-8 lg:mx-12">
-            </ul>
-        </aside>
-    </nav> -->
+    <div id="modalOverlay" class="absolute w-screen h-screen inset-0 bg-gray-900/70 z-50 overflow-hidden"
+        style="display:none;">
+        <div id="modal" class="h-full overflow-y-scroll relative px-3 py-8">
+
+            <button id="close"
+                class="m-4 fixed top-0 right-1 bg-gray-200 hover:bg-cyan-600 rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-black shadow"
+                type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div class="flex flex-col lg:flex-row justify-center items-center gap-6 m-auto">
+                <img class="max-h-[70vh] max-w-auto" src="/assets/img/kompeten.png" alt="Sertifikat Kompetensi"
+                    title="Sertifikat Kompetensi">
+                <img class="h-auto sm:h-[70vh] max-w-auto" src="/assets/img/pelatihan.png" alt="Sertifikat Pelatihan"
+                    title="Sertifikat Pelatihan">
+            </div>
+
+        </div>
+    </div>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script type="module" src="./main.js"></script>
 </body>
 
 </html>
