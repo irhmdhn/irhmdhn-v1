@@ -35,13 +35,12 @@ $("#tab li").click(function () {
   }
 });
 
-$("#open").click(function () {
-  $("#modalOverlay").show().addClass("modal-open");
-  $("#close").click(function () {
-    var modal = $("#modalOverlay");
-    modal.removeClass("modal-open");
+$(".open-modal").click(function () {
+  $(this).next(".modal").removeClass("hidden");
+  $(".close-modal").click(function () {
+    let modal = $(this).closest(".modal");
     setTimeout(function () {
-      modal.hide();
-    }, 200);
+      modal.addClass("hidden");
+    }, 100);
   });
 });

@@ -26,9 +26,7 @@
             class="bx bx-moon text-gray-400 text-2xl cursor-pointer dark:text-cyan-600 dark:hover:text-cyan-500 hover:text-cyan-600 transition ease-in"
             title="Dark/Light Mode">
         </i>
-
     </header>
-
 
     <aside id="nav-left"
         class="hidden sm:block text-gray-400 dark:text-cyan-600 sm:fixed top-1/2 -translate-y-1/2 left-0 z-20 order-last sm:order-first sm:mx-10 lg:mx-12">
@@ -76,7 +74,7 @@
         </ul>
     </aside>
     <aside id="nav-right"
-        class="bg-gray-100/75 dark:bg-gray-800/75 sm:bg-transparent dark:sm:bg-transparent text-gray-400 dark:text-cyan-500 w-[calc(100vw-2rem)] sm:w-auto inset-x-0 sm:inset-auto fixed bottom-0 sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2 sm:right-0 z-20 sm:mx-10 lg:mx-12 mx-auto mb-3 sm:mb-0 rounded-full backdrop-blur sm:backdrop-blur-none">
+        class="bg-gray-100/75 dark:bg-gray-800/75 sm:bg-transparent dark:sm:bg-transparent text-gray-400 dark:text-cyan-500 w-auto inset-x-0 sm:inset-auto fixed bottom-0 sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2 sm:right-0 z-20 sm:mx-10 lg:mx-12 mx-3 mb-3 sm:mb-0 rounded-full backdrop-blur sm:backdrop-blur-none">
         <ul class="flex justify-around flex-row sm:flex-col sm:gap-6 py-3 sm:p-0">
             <li class='group w-16 sm:w-fit'>
                 <a href='#home' class='nav-link'>
@@ -152,7 +150,7 @@
         <section id="portfolio" class="min-h-screen flex items-center snap-start">
             <div class="container h-auto">
                 <div class="text-center mb-6">
-                    <h2 class="text-4xl font-semibold text-cyan-600 mb-3">Portofolio</h2>
+                    <h2 class="text-3xl lg:text-4xl font-semibold text-cyan-600 mb-3">Portofolio</h2>
                     <p class="text-secondary">Berikut project yang saya buat selama perkuliahan 🎨</p>
                 </div>
                 <div class="flex gap-4 overflow-x-auto snap-x py-3">
@@ -271,7 +269,7 @@
         <section id="about-me" class="min-h-screen flex items-center snap-start">
             <div class="container text-center h-auto">
                 <div class="text-center mb-6">
-                    <h2 class="text-4xl font-semibold text-cyan-600 mb-3">Tentang Saya</h2>
+                    <h2 class="text-3xl lg:text-4xl font-semibold text-cyan-600 mb-3">Tentang Saya</h2>
                     <p class="text-secondary">Penjelasan singkat tentang pengalaman saya 🦸‍♂️</p>
                 </div>
 
@@ -416,9 +414,34 @@
                                             </li>
                                             <li>Menggunakan library atau komponen pre-existing</li>
                                         </ul>
-                                        <button id="open" class="ms-auto sm:absolute top-3 right-3 btn-primary-outline">
+                                        <button data-modal-open="certificate" id="open"
+                                            class="open-modal ms-auto sm:absolute top-3 right-3 btn-primary-outline">
                                             <span>Lihat</span>
                                         </button>
+
+                                        <div data-modal="certificate"
+                                            class="modal fixed w-screen h-screen inset-0 bg-gray-900/70 z-50 overflow-hidden hidden transition-opacity">
+                                            <div class="h-full overflow-y-scroll relative px-3 py-8">
+                                                <button
+                                                    class="close-modal m-4 fixed top-0 right-1 bg-gray-200 hover:bg-cyan-600 rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-black shadow"
+                                                    type="button">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                                <div
+                                                    class="flex flex-col lg:flex-row justify-center items-center gap-6 m-auto">
+                                                    <img class="max-h-[70vh] max-w-auto" src="/assets/img/kompeten.webp"
+                                                        alt="Sertifikat Kompetensi" title="Sertifikat Kompetensi">
+                                                    <img class="h-auto sm:h-[70vh] max-w-auto"
+                                                        src="/assets/img/pelatihan.webp" alt="Sertifikat Pelatihan"
+                                                        title="Sertifikat Pelatihan">
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -430,90 +453,126 @@
 
         </section>
 
-        <section id="contact" class="min-h-screen flex items-center snap-start">
+        <section id="contact" class="min-h-screen relative flex items-center snap-start">
             <div class='w-full'>
-
                 <div class="text-center mb-6">
-                    <h2 class="text-4xl font-semibold text-cyan-600 mb-3">Kontak</h2>
+                    <h2 class="text-3xl lg:text-4xl font-semibold text-cyan-600 mb-3">Kontak</h2>
                     <p class="text-secondary">Kirimkan saya pesan dari anda 😊</p>
                 </div>
-                <form action="#" method="POST" class="mx-auto xl:px-36 mt-6">
-                    <div class="grid grid-cols-1 gap-x-4 gap-y-2 md:grid-cols-2">
-                        <div>
-                            <label for="name" htmlFor="name" class="block text-sm font-semibold">
-                                Nama
-                            </label>
-                            <div>
-                                <input type="text" name="name" id="name" autoComplete="name"
-                                    class="block w-full rounded-md border-0 px-3 py-2 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition" />
+                <div class="flex justify-center">
+                    <button data-modal-open="message"
+                        class="open-modal relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium transition duration-300 ease-out bg-cyan-600 border-2 border-cyan-600 rounded-lg shadow group active:scale-90">
+                        <span
+                            class="absolute inset-0 flex items-center justify-center w-full h-full duration-300 translate-y-full bg-cyan-600 group-hover:translate-y-0 ease">
+                            <svg class="inline-flex" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 12 12">
+                                <path fill="#e5e7eb"
+                                    d="M4 5.5a.5.5 0 0 1 .5-.5h3a.5.5 0 1 1 0 1h-3a.5.5 0 0 1-.5-.5ZM4.5 7a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2ZM1 6a5 5 0 1 1 2.59 4.382l-1.944.592a.5.5 0 0 1-.624-.624l.592-1.947A4.98 4.98 0 0 1 1 6Zm5-4a4 4 0 0 0-3.417 6.08a.5.5 0 0 1 .051.406l-.383 1.259l1.257-.383a.5.5 0 0 1 .407.052A4 4 0 1 0 6 2Z" />
+                            </svg>
+                        </span>
+                        <span
+                            class="absolute flex items-center justify-center w-full h-full text-gray-200 transition-all duration-300 transform group-hover:-translate-y-full ease">Kirim
+                            pesan</span>
+                        <span class="relative invisible">Kirim pesan</span>
+                    </button>
+                    <div data-modal="message"
+                        class="modal hidden fixed w-screen h-screen inset-0 grid place-content-center bg-gray-900/70 z-50 overflow-hidden transition-opacity">
+                        <div class="bg-gray-200 dark:bg-gray-800 lg:max-w-screen-md rounded-lg">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-xl font-semibold m-4">Kirim Pesan</h3>
+                                <button
+                                    class="close-modal m-4 hover:bg-gray-300 dark:hover:bg-gray-700 rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-black shadow"
+                                    type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
                             </div>
-                        </div>
-                        <div>
-                            <label for="email" htmlFor="email" class="block text-sm font-semibold">
-                                Email
-                            </label>
-                            <div>
-                                <input type="email" name="email" id="email" autoComplete="email"
-                                    class="block w-full rounded-md border-0 px-3 py-2 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition" />
-                            </div>
-                        </div>
-                        <div class="md:col-span-2">
-                            <label for="subject" htmlFor="subject" class="block text-sm font-semibold">
-                                Subjek
-                            </label>
-                            <div>
-                                <input type="text" name="subject" id="subject" autoComplete="subject"
-                                    class="block w-full rounded-md border-0 px-3 py-2 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition" />
-                            </div>
-                        </div>
-                        <div class="md:col-span-2">
-                            <label for="message" htmlFor=" message" class="block text-sm font-semibold">
-                                Pesan
-                            </label>
-                            <div>
-                                <textarea name="message" id="message" rows=3
-                                    class="block w-full rounded-md border-0 px-3 py-2 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition">
-                                </textarea>
-                            </div>
-                        </div>
+                            <form action="#" method="POST"
+                                class="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2 mx-auto p-8">
 
+                                <div>
+                                    <label for="name" htmlFor="name" class="block text-sm mb-2">
+                                        Nama
+                                    </label>
+                                    <div>
+                                        <input type="text" name="name" id="name" autoComplete="name"
+                                            class="block w-full rounded-md border-0 px-3 py-2 bg-gray-100 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="email" htmlFor="email" class="block text-sm mb-2">
+                                        Email
+                                    </label>
+                                    <div>
+                                        <input type="email" name="email" id="email" autoComplete="email"
+                                            class="block w-full rounded-md border-0 px-3 py-2 bg-gray-100 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition" />
+                                    </div>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label for="subject" htmlFor="subject" class="block text-sm mb-2">
+                                        Subjek
+                                    </label>
+                                    <div>
+                                        <input type="text" name="subject" id="subject" autoComplete="subject"
+                                            class="block w-full rounded-md border-0 px-3 py-2 bg-gray-100 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition" />
+                                    </div>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label for="message" htmlFor=" message" class="block text-sm mb-2">
+                                        Pesan
+                                    </label>
+                                    <div>
+                                        <textarea name="message" id="message" rows=3
+                                            class="block w-full rounded-md border-0 px-3 py-2 bg-gray-100 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition">
+                                </textarea>
+                                    </div>
+                                </div>
+                                <div class="mt-8 col-span-2">
+                                    <button type="submit" class="btn-primary float-right">
+                                        Kirim
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="mt-10">
-                        <button type="submit" class="btn-primary">
-                            Kirim
-                        </button>
-                    </div>
-                </form>
+                </div>
+
+                <div class="relative flex py-5 items-center">
+                    <div class="flex-grow border-t border-gray-400"></div>
+                    <span class="flex-shrink text-gray-400 mx-2 sm:mx-3">Atau</span>
+                    <div class="flex-grow border-t border-gray-400"></div>
+                </div>
+                <div class="grid grid-cols-2 gap-3 text-gray-600 dark:text-gray-400">
+                    <a href="#"
+                        class="flex gap-2 items-center outline outline-1 outline-gray-400 dark:outline-none dark:bg-gray-800 rounded-lg p-4 hover:text-gray-200 hover:outline-none hover:bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+                        <i class='bx bxl-instagram rounded text-xl sm:text-2xl'></i>
+                        <span class="text-sm sm:text-base">Instagram</span>
+                    </a>
+                    <a href="#"
+                        class="flex gap-2 items-center outline outline-1 outline-gray-400 dark:outline-none dark:bg-gray-800 rounded-lg p-4 hover:text-gray-200 hover:outline-none hover:bg-[#0a66c2] dark:hover:bg-[#0a66c2]">
+                        <i class='bx bxl-linkedin rounded text-xl sm:text-2xl'></i>
+                        <span class="text-sm sm:text-base">LinkedIn</span>
+                    </a>
+                    <a href="#"
+                        class="flex gap-2 items-center outline outline-1 outline-gray-400 dark:outline-none dark:bg-gray-800 rounded-lg p-4 hover:text-gray-200 hover:outline-none hover:bg-[#171515] dark:hover:bg-[#171515]">
+                        <i class='bx bxl-github rounded text-xl sm:text-2xl'></i>
+                        <span class="text-sm sm:text-base">GitHub</span>
+                    </a>
+                    <a href="#"
+                        class="flex gap-2 items-center outline outline-1 outline-gray-400 dark:outline-none dark:bg-gray-800 rounded-lg p-4 hover:text-gray-200 hover:outline-none hover:bg-red-500 dark:hover:bg-red-500">
+                        <i class='bx bx-envelope rounded text-xl sm:text-2xl'></i>
+                        <span class="text-sm sm:text-base">Email</span>
+                    </a>
+                </div>
+
+                <footer class="text-secondary text-center my-3 absolute bottom-0 inset-x-0">
+                    Copyright &copy; 2023 irhmdhn
+                </footer>
             </div>
         </section>
-        <footer class="text-center my-3">
-            Copyright &copy; 2023 irhmdhn
-        </footer>
-
-
     </main>
-    <div id="modalOverlay" class="absolute w-screen h-screen inset-0 bg-gray-900/70 z-50 overflow-hidden"
-        style="display:none;">
-        <div id="modal" class="h-full overflow-y-scroll relative px-3 py-8">
-
-            <button id="close"
-                class="m-4 fixed top-0 right-1 bg-gray-200 hover:bg-cyan-600 rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-black shadow"
-                type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-
-            <div class="flex flex-col lg:flex-row justify-center items-center gap-6 m-auto">
-                <img class="max-h-[70vh] max-w-auto" src="/assets/img/kompeten.png" alt="Sertifikat Kompetensi"
-                    title="Sertifikat Kompetensi">
-                <img class="h-auto sm:h-[70vh] max-w-auto" src="/assets/img/pelatihan.png" alt="Sertifikat Pelatihan"
-                    title="Sertifikat Pelatihan">
-            </div>
-
-        </div>
-    </div>
     <script type="module" src="/src/main.js"></script>
 </body>
 
