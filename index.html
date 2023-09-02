@@ -7,7 +7,6 @@
     <link rel="icon" type="image/x-icon" href="/assets/logo/logo.svg">
     <link rel="stylesheet" href="/dist/main.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
     <script type="module" src="/dist/jquery.js"></script>
     <title>Irhmdhn</title>
 </head>
@@ -117,7 +116,7 @@
     </aside>
     <main
         class=" h-screen max-w-screen relative px-6 sm:px-32 md:px-44 lg:px-56 md:snap-y snap-proximity overflow-y-scroll scroll-smooth">
-        <section id="home" class="min-h-screen flex items-center snap-start" data-aos="fade-down">
+        <section id="home" class="min-h-screen flex items-center snap-start">
             <div class="flex items-center w-full relative">
                 <div class="iama flex-1 mt-4 md:mt-0 text-left sm:text-center">
                     <h1
@@ -137,10 +136,10 @@
                         pengetahuan dan keterampilan dasar dalam membuat tampilan yang interaktif, atraktif dan user
                         friendly.</p>
                     <div class="flex flex-wrap justify-start sm:justify-center gap-4">
-                        <a href="#contact" class="btn-primary" data-aos="fade-up-right">Hubungi saya</a>
+                        <a href="#contact" class="btn-primary">Hubungi saya</a>
                         <a target="_blank"
                             href="https://drive.google.com/file/d/11yqn_eR-z-oVQsgact0Cx9Rol4EK0jQT/view?usp=sharing"
-                            class="btn-link" data-aos="fade-up-left"><span>Lihat CV</span></a>
+                            class="btn-link"><span>Lihat CV</span></a>
                     </div>
 
                 </div>
@@ -149,7 +148,7 @@
 
         <section id="portfolio" class="min-h-screen flex items-center snap-start">
             <div class="container h-auto">
-                <div class="text-center mb-6">
+                <div class="text-center mb-6" data-aos="fade-down">
                     <h2 class="text-3xl lg:text-4xl font-semibold text-cyan-600 mb-3">Portofolio</h2>
                     <p class="text-secondary">Berikut project yang saya buat selama perkuliahan 🎨</p>
                 </div>
@@ -396,7 +395,7 @@
                                                 <h4 class="text-lg lg:text-xl font-semibold">
                                                     (BNSP) KOMINFO - Digitalent
                                                 </h4>
-                                                <p class="text-xs lg:text-base text-gray-600 dark:text-gray-400">
+                                                <p class="text-sm text-gray-600 dark:text-gray-400">
                                                     VSGA - Junior Web Developer
                                                 </p>
                                             </div>
@@ -461,7 +460,7 @@
                 </div>
                 <div class="flex justify-center">
                     <button data-modal-open="message"
-                        class="open-modal relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium transition duration-300 ease-out bg-cyan-600 border-2 border-cyan-600 rounded-lg shadow group active:scale-90">
+                        class="open-modal relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium transition duration-300 ease-out bg-cyan-600 border-2 border-cyan-600 rounded-lg shadow group active:scale-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600">
                         <span
                             class="absolute inset-0 flex items-center justify-center w-full h-full duration-300 translate-y-full bg-cyan-600 group-hover:translate-y-0 ease">
                             <svg class="inline-flex" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -477,11 +476,11 @@
                     </button>
                     <div data-modal="message"
                         class="modal hidden fixed w-screen h-screen inset-0 grid place-content-center bg-gray-900/70 z-50 overflow-hidden transition-opacity">
-                        <div class="bg-gray-200 dark:bg-gray-800 lg:max-w-screen-md rounded-lg">
+                        <div class="bg-gray-200 dark:bg-gray-800 lg:w-full rounded-lg p-8">
                             <div class="flex justify-between items-center">
-                                <h3 class="text-xl font-semibold m-4">Kirim Pesan</h3>
+                                <h3 class="text-xl font-semibold">Kirim Pesan</h3>
                                 <button
-                                    class="close-modal m-4 hover:bg-gray-300 dark:hover:bg-gray-700 rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-black shadow"
+                                    class="close-modal hover:bg-gray-300 dark:hover:bg-gray-700 rounded-full p-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 shadow"
                                     type="button">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -490,48 +489,47 @@
                                 </button>
                             </div>
                             <form action="#" method="POST"
-                                class="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2 mx-auto p-8">
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mt-6 mx-auto">
 
                                 <div>
-                                    <label for="name" htmlFor="name" class="block text-sm mb-2">
+                                    <label for="name" class="block text-sm mb-2">
                                         Nama
                                     </label>
                                     <div>
-                                        <input type="text" name="name" id="name" autoComplete="name"
-                                            class="block w-full rounded-md border-0 px-3 py-2 bg-gray-100 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition" />
+                                        <input type="text" name="name" id="name" autoComplete="name" class="form-field"
+                                            required />
                                     </div>
                                 </div>
                                 <div>
-                                    <label for="email" htmlFor="email" class="block text-sm mb-2">
+                                    <label for="email" class="block text-sm mb-2">
                                         Email
                                     </label>
                                     <div>
                                         <input type="email" name="email" id="email" autoComplete="email"
-                                            class="block w-full rounded-md border-0 px-3 py-2 bg-gray-100 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition" />
+                                            class="form-field" required />
                                     </div>
                                 </div>
-                                <div class="md:col-span-2">
-                                    <label for="subject" htmlFor="subject" class="block text-sm mb-2">
+                                <div class="sm:col-span-2">
+                                    <label for="subject" class="block text-sm mb-2">
                                         Subjek
                                     </label>
                                     <div>
                                         <input type="text" name="subject" id="subject" autoComplete="subject"
-                                            class="block w-full rounded-md border-0 px-3 py-2 bg-gray-100 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition" />
+                                            class="form-field" required />
                                     </div>
                                 </div>
-                                <div class="md:col-span-2">
-                                    <label for="message" htmlFor=" message" class="block text-sm mb-2">
+                                <div class="sm:col-span-2">
+                                    <label for="message" class="block text-sm mb-2">
                                         Pesan
                                     </label>
                                     <div>
-                                        <textarea name="message" id="message" rows=3
-                                            class="block w-full rounded-md border-0 px-3 py-2 bg-gray-100 dark:bg-gray-800 ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm transition">
+                                        <textarea name="message" id="message" rows=3 class="form-field" required>
                                 </textarea>
                                     </div>
                                 </div>
-                                <div class="mt-8 col-span-2">
+                                <div class="mt-6 sm:col-span-2">
                                     <button type="submit" class="btn-primary float-right">
-                                        Kirim
+                                        <i class="bx bx-paper-plane text-2xl"></i>
                                     </button>
                                 </div>
                             </form>
