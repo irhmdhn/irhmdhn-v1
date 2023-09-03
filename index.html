@@ -11,13 +11,13 @@
     <title>Irhmdhn</title>
 </head>
 
-<body class="bg-gray-200 dark:bg-gray-900 text-gray-900 dark:text-gray-200 transition ease-in">
+<body class="bg-main text-gray-900 dark:text-gray-200 transition ease-in">
     <img src="/assets/other/blur.svg" alt="blur"
         class="fixed -top-32 left-1/4 blur-3xl rotate-90 opacity-10 -z-50 animate-spin-slow" />
     <img src="/assets/other/blur-slow.svg" alt="blur"
         class="fixed left-0 bottom-0 blur-3xl opacity-10 -z-50 animate-spin-slowly" />
     <header
-        class="w-screen bg-gray-200/75 sm:bg-transparent dark:bg-gray-900/75 sm:dark:bg-transparent fixed flex items-center justify-between px-6 py-3 sm:px-10 lg:py-11 lg:px-12 z-20 backdrop-blur sm:backdrop-blur-none transition ease-in">
+        class="w-screen bg-gray-200/75 sm:bg-transparent dark:bg-gray-900/75 sm:dark:bg-transparent fixed flex items-center justify-between px-6 py-3 sm:px-8 lg:pt-11 lg:px-12 z-20 backdrop-blur sm:backdrop-blur-none transition ease-in">
         <a href="#home"><img src="/assets/logo/logo.svg" alt="Irhmdhn Logo" title="Irhmdhn Logo"
                 class="h-8 hover:scale-110 hover:rotate-12 active:-rotate-180 transition"></a>
 
@@ -26,9 +26,8 @@
             title="Dark/Light Mode">
         </i>
     </header>
-
     <aside id="nav-left"
-        class="hidden sm:block text-gray-400 dark:text-cyan-600 sm:fixed top-1/2 -translate-y-1/2 left-0 z-20 order-last sm:order-first sm:mx-10 lg:mx-12">
+        class="hidden sm:block text-gray-400 dark:text-cyan-600 sm:fixed top-1/2 -translate-y-1/2 left-0 z-20 order-last sm:order-first sm:mx-8 lg:mx-12">
         <ul class="flex justify-around flex-col gap-6">
             <li class='group w-16 sm:w-auto'>
                 <a href="https://www.instagram.com/irhmdhn/" target='_blank'
@@ -73,7 +72,7 @@
         </ul>
     </aside>
     <aside id="nav-right"
-        class="bg-gray-100/75 dark:bg-gray-800/75 sm:bg-transparent dark:sm:bg-transparent text-gray-400 dark:text-cyan-500 w-auto inset-x-0 sm:inset-auto fixed bottom-0 sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2 sm:right-0 z-20 sm:mx-10 lg:mx-12 mx-3 mb-3 sm:mb-0 rounded-full backdrop-blur sm:backdrop-blur-none">
+        class="bg-gray-100/75 dark:bg-gray-800/75 sm:bg-transparent dark:sm:bg-transparent text-gray-400 dark:text-cyan-500 w-auto inset-x-0 sm:inset-auto fixed bottom-0 sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2 sm:right-0 z-20 sm:mx-8 lg:mx-12 mx-3 mb-3 sm:mb-0 rounded-full backdrop-blur sm:backdrop-blur-none">
         <ul class="flex justify-around flex-row sm:flex-col sm:gap-6 py-3 sm:p-0">
             <li class='group w-16 sm:w-fit'>
                 <a href='#home' class='nav-link'>
@@ -114,9 +113,10 @@
             </li>
         </ul>
     </aside>
+
     <main
         class=" h-screen max-w-screen relative px-6 sm:px-32 md:px-44 lg:px-56 md:snap-y snap-proximity overflow-y-scroll scroll-smooth">
-        <section id="home" class="min-h-screen flex items-center snap-start">
+        <section id="home" class="relative min-h-screen flex items-center snap-start">
             <div class="flex items-center w-full relative">
                 <div class="iama flex-1 mt-4 md:mt-0 text-left sm:text-center">
                     <h1
@@ -124,26 +124,17 @@
                         UI DESIGNER, <br>
                         WEB DEVELOPER
                     </h1>
-                    <h3 class="text-xl md:text-2xl font-semibold">
-                        Ihwannudin Rahmadhani - <span class="text-cyan-600">Rama</span>
-                    </h3>
                     <p class="text-sm lg:text-base my-5 text-left sm:text-center leading-6 mx-auto lg:max-w-3xl">Saya
                         adalah <span class="text-cyan-600 font-semibold">mahasiswa</span>
-                        yang
-                        memiliki minat
-                        dan bakat di bidang <span class="text-cyan-600 font-semibold">Web Development
-                            dan UI Designer</span>, saya memiliki
+                        yang memiliki minat dan bakat di bidang <span class="text-cyan-600 font-semibold">Web
+                            Development dan UI Designer</span>, saya memiliki
                         pengetahuan dan keterampilan dasar dalam membuat tampilan yang interaktif, atraktif dan user
                         friendly.</p>
-                    <div class="flex flex-wrap justify-start sm:justify-center gap-4">
-                        <a href="#contact" class="btn-primary">Hubungi saya</a>
-                        <a target="_blank"
-                            href="https://drive.google.com/file/d/11yqn_eR-z-oVQsgact0Cx9Rol4EK0jQT/view?usp=sharing"
-                            class="btn-link"><span>Lihat CV</span></a>
-                    </div>
 
+                    <a href="#contact" class="btn-primary">Hubungi saya</a>
                 </div>
             </div>
+
         </section>
 
         <section id="portfolio" class="min-h-screen flex items-center snap-start">
@@ -153,18 +144,13 @@
                     <p class="text-secondary">Berikut project yang saya buat selama perkuliahan 🎨</p>
                 </div>
                 <div class="flex gap-4 overflow-x-auto snap-x py-3">
-
                     <div
-                        class="group max-w-xs flex-shrink-0 snap-start overflow-hidden bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800/75 dark:border-gray-700 transition">
-
+                        class="group bg-main max-w-xs flex-shrink-0 snap-start overflow-hidden rounded-lg shadow-md transition">
                         <img class="max-h-52 mx-auto" src="/assets/img/lms.webp" alt="LMS AMIKOM" title="LMS AMIKOM" />
-
                         <div class="p-4">
-
                             <h5 class="mb-2 text-xl font-bold tracking-tight">
                                 Recreate LMS AMIKOM
                             </h5>
-
                             <p class="mb-3 text-secondary">Sistem pengelola pembelajaran
                                 Universitas AMIKOM (Final Project)
                             </p>
@@ -179,19 +165,14 @@
                             </div>
                         </div>
                     </div>
-
                     <div
-                        class="group max-w-xs flex-shrink-0 snap-start overflow-hidden bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800/75 dark:border-gray-700 transition">
-
+                        class="group bg-main max-w-xs flex-shrink-0 snap-start overflow-hidden rounded-lg shadow-md transition">
                         <img class="max-h-52 mx-auto" src="/assets/img/topap.webp" alt="Website Top Up (TOPAP)"
                             title="Website Top Up (TOPAP)" />
-
                         <div class="p-4">
-
                             <h5 class="mb-2 text-xl font-bold tracking-tight">
                                 Website Top Up (TOPAP)
                             </h5>
-
                             <p class="mb-3 text-secondary">Sistem CRUD website pengisian game (Final
                                 Project)
                             </p>
@@ -204,26 +185,19 @@
                                 <a target="_blank" href="https://github.com/irhmdhn/topap"
                                     class="btn-primary-outline-sm flex items-center"><span>Github</span></a>
                             </div>
-
                         </div>
                     </div>
-
                     <div
-                        class="group max-w-xs flex-shrink-0 snap-start overflow-hidden bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800/75 dark:border-gray-700 transition">
-
+                        class="group bg-main max-w-xs flex-shrink-0 snap-start overflow-hidden rounded-lg shadow-md transition">
                         <img class="max-h-52 mx-auto" src="/assets/img/uefa.webp" alt="UEFA Squad List"
                             title="UEFA Squad List" />
-
                         <div class="p-4">
-
                             <h5 class="mb-2 text-xl font-bold tracking-tight">
                                 UEFA Squad List
                             </h5>
-
                             <p class="mb-3 text-secondary">List tim dan jadwal di liga EUFA (Final
                                 Project Hybrid Web)
                             </p>
-
                             <div class="flex justify-between">
                                 <div class="flex gap-2">
                                     <img src="/assets/logo/angular.svg" alt="Angular" title="Angular">
@@ -234,23 +208,17 @@
                             </div>
                         </div>
                     </div>
-
                     <div
-                        class="group max-w-xs flex-shrink-0 snap-start overflow-hidden bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800/75 dark:border-gray-700 transition">
-
+                        class="group bg-main max-w-xs flex-shrink-0 snap-start overflow-hidden rounded-lg shadow-md transition">
                         <img class="max-h-52 mx-auto" src="/assets/img/doneat.webp" alt="Doneat" title="Doneat" />
-
                         <div class="p-4">
-
                             <h5 class="mb-2 text-xl font-bold tracking-tight">
                                 Doneat
                             </h5>
-
                             <p class="mb-3 text-secondary">Design aplikasi donasi untuk
                                 mengatasi kelaparan (Final Project)
                             </p>
                             <div class="flex justify-between">
-
                                 <div class="flex gap-2">
                                     <img src="/assets/logo/figma.svg" alt="Figma" title="Figma">
                                 </div>
@@ -260,50 +228,83 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
         <section id="about-me" class="min-h-screen flex items-center snap-start">
-            <div class="container text-center h-auto">
+            <div class="container text-center min-h-[calc(100vh_-_6rem)]">
                 <div class="text-center mb-6">
                     <h2 class="text-3xl lg:text-4xl font-semibold text-cyan-600 mb-3">Tentang Saya</h2>
                     <p class="text-secondary">Penjelasan singkat tentang pengalaman saya 🦸‍♂️</p>
                 </div>
-
                 <article class="text-start">
-                    <div class="flex flex-col sm:flex-row sm:gap-5 lg:gap-12 my-6">
-                        <div id="tab" class="w-full min-h-max">
-                            <ul class="flex flex-wrap justify-center sm:gap-3 text-base lg:text-md font-semibold text-center mb-6"
-                                id="myTab">
-                                <li class="mr-2 border-b-2 border-cyan-600 text-cyan-600" data-id='skills'>
+                    <div class="flex flex-col sm:flex-row sm:gap-5 lg:gap-12 mt-6">
+                        <div id="tab" class="w-full h-fit">
+                            <ul class="flex flex-wrap justify-center gap-1 sm:gap-3 text-base lg:text-md font-semibold text-center mb-6"
+                                id="tab-buttons">
+                                <li class="border-b-2 border-cyan-600 text-cyan-600" data-id='profile'>
+                                    <button class="inline-block p-2 hover:text-cyan-500" type="button">
+                                        Profil
+                                    </button>
+                                </li>
+                                <li class="border-b-2 border-transparent" data-id='skills'>
                                     <button class="inline-block p-2 hover:text-cyan-500" type="button">
                                         Kemampuan
                                     </button>
                                 </li>
-                                <li class="mr-2 border-b-2 border-transparent" data-id='educations'>
+                                <li class="border-b-2 border-transparent" data-id='educations'>
                                     <button class="inline-block p-2 hover:text-cyan-500" type="button">
                                         Edukasi
                                     </button>
                                 </li>
-                                <li class="mr-2 border-b-2 border-transparent" data-id='certificate'>
+                                <li class="border-b-2 border-transparent" data-id='certificate'>
                                     <button class="inline-block p-2 hover:text-cyan-500" type="button">
                                         Sertifikat
                                     </button>
                                 </li>
                             </ul>
-                            <div class="tab-content my-3" data-content='skills'>
+                            <div class="tab-content bg-main relative p-6 flex flex-col items-center md:max-w-2xl md:flex-row mx-auto overflow-hidden rounded-lg shadow-md transition"
+                                data-content='profile'>
                                 <div
-                                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center md:justify-items-stretch gap-6">
-
+                                    class="bg-main aspect-square rounded-full border-2 border-cyan-600 relative overflow-hidden">
+                                    <img src="/assets/other/back-profile.svg"
+                                        class="absolute top-0 md:bottom-1/4 md:w-28 animate-spin-slow" />
+                                    <img src="/assets/other/back-profile.svg"
+                                        class="absolute top-1/4 md:right-1/4 md:w-32 animate-spin-slowly" />
+                                    <img src="/assets/other/back-profile.svg"
+                                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-28 animate-spin-slow" />
+                                    <img src="/assets/img/image 2.png" alt="a" class="relative w-44" />
+                                </div>
+                                <div
+                                    class="flex flex-col justify-between pt-4 md:ps-4 md:pt-0 leading-normal sm:text-center md:text-start">
+                                    <h5 class="text-2xl md:text-3xl font-semibold">
+                                        IHWANNUDIN RAHMADHANI
+                                    </h5>
+                                    <span class="md:text-lg text-cyan-600 font-semibold">
+                                        Irhmdhn - Rama
+                                    </span>
+                                    <p class="font-light md:font-normal mt-2 mb-3">
+                                        Berdomisili Di Gunungkidul, Yogyakarta. Berstatus sebagai mahasiswa
+                                        aktif
+                                        semester 5
+                                    </p>
+                                    <a target="_blank"
+                                        href="https://drive.google.com/file/d/11yqn_eR-z-oVQsgact0Cx9Rol4EK0jQT/view?usp=sharing"
+                                        class="sm:mx-auto md:m-0  btn-primary-sm w-fit">
+                                        <span>Lihat CV</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab-content hidden" data-content='skills'>
+                                <div
+                                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center md:justify-items-stretch gap-4 sm:gap-6">
                                     <div
-                                        class="w-full lg:w-auto flex flex-col items-center md:items-center gap-1 border border-gray-400 dark:border-gray-600 dark:hover:bg-gray-800 p-8 rounded-lg transition">
+                                        class="bg-main w-full lg:w-auto flex flex-col items-center md:items-center gap-1 p-6 sm:p-8 shadow-md rounded-lg transition">
                                         <div class="flex gap-3">
-                                            <img src="/assets/logo/bootstrap.svg" alt="Bootstrap" title="Bootstrap"
-                                                class="hover:scale-125 transition">
-                                            <img src="/assets/logo/tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS"
-                                                class="hover:scale-125 transition">
+                                            <img src="/assets/logo/bootstrap.svg" alt="Bootstrap" title="Bootstrap">
+                                            <img src="/assets/logo/tailwind.svg" alt="Tailwind CSS"
+                                                title="Tailwind CSS">
                                         </div>
                                         <h4 class="text-lg lg:text-xl font-semibold">
                                             Front-End
@@ -313,12 +314,11 @@
                                         </p>
                                     </div>
                                     <div
-                                        class="w-full lg:w-auto flex flex-col items-center md:items-center gap-1 border border-gray-400 dark:border-gray-600 dark:hover:bg-gray-800 p-8 rounded-lg transition">
+                                        class="bg-main w-full lg:w-auto flex flex-col items-center md:items-center gap-1 p-6 sm:p-8 shadow-md rounded-lg transition">
                                         <div class="flex gap-3">
                                             <img src="/assets/logo/codeigniter.svg" alt="Codeigniter"
-                                                title="Codeigniter" class="hover:scale-125 transition">
-                                            <img src="/assets/logo/laravel.svg" alt="Laravel" title="Laravel"
-                                                class="hover:scale-125 transition">
+                                                title="Codeigniter">
+                                            <img src="/assets/logo/laravel.svg" alt="Laravel" title="Laravel">
                                         </div>
                                         <h4 class="text-lg lg:text-xl font-semibold">
                                             Back-End
@@ -328,10 +328,9 @@
                                         </p>
                                     </div>
                                     <div
-                                        class="w-full lg:w-auto flex flex-col items-center md:items-center gap-1 border border-gray-400 dark:border-gray-600 dark:hover:bg-gray-800 p-8 rounded-lg transition">
+                                        class="bg-main w-full lg:w-auto flex flex-col items-center md:items-center gap-1 p-6 sm:p-8 shadow-md rounded-lg transition">
                                         <div class="flex">
-                                            <img src="/assets/logo/figma.svg" alt="Figma" title="Figma"
-                                                class="hover:scale-125 transition">
+                                            <img src="/assets/logo/figma.svg" alt="Figma" title="Figma">
                                         </div>
                                         <h4 class="text-lg lg:text-xl font-semibold">
                                             UI Designer
@@ -341,35 +340,33 @@
                                         </p>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="tab-content hidden my-3" data-content='educations'>
+                            <div class="tab-content hidden" data-content='educations'>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                                     <div
-                                        class="flex flex-row items-center md:items-center gap-3 border border-gray-400 dark:border-gray-600 dark:hover:bg-gray-800 p-8 md:p-3 lg:p-8 rounded-lg transition">
+                                        class="bg-main flex flex-row items-center md:items-center gap-3 p-8 md:p-3 lg:p-8 rounded-lg shadow-md transition">
                                         <img class="object-cover w-9" src="/assets/logo/smk.webp" title="SMKN 1 Ponjong"
                                             alt="SMKN 1 Ponjong">
                                         <div class="flex flex-col justify-between">
-                                            <p class="text-sm font-semibold">
+                                            <span class="text-sm text-cyan-600 font-semibold">
                                                 2018 - 2020
-                                            </p>
+                                            </span>
                                             <h4 class="text-lg lg:text-xl font-semibold">
                                                 SMK Negeri 1 Ponjong
                                             </h4>
                                             <p class="text-secondary">
                                                 Multimedia
                                             </p>
-
                                         </div>
                                     </div>
                                     <div
-                                        class="flex flex-row items-center md:items-center gap-3 border border-gray-400 dark:border-gray-600 dark:hover:bg-gray-800 p-8 md:p-3 lg:p-8 rounded-lg transition">
+                                        class="bg-main flex flex-row items-center md:items-center gap-3 p-8 md:p-3 lg:p-8 rounded-lg shadow-md transition">
                                         <img class="object-cover w-9" src="/assets/logo/amikom.webp"
                                             title="Universitas AMIKOM Yogyakarta" alt="Universitas AMIKOM Yogyakarta">
                                         <div class="flex flex-col justify-between">
-                                            <p class="text-sm font-semibold">
+                                            <span class="text-sm text-cyan-600 font-semibold">
                                                 2021 - Sekarang
-                                            </p>
+                                            </span>
                                             <h4 class="text-lg lg:text-xl font-semibold">
                                                 Universitas AMIKOM Yogyakarta
                                             </h4>
@@ -379,19 +376,17 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="tab-content hidden" data-content='certificate'>
-                                <div class="border border-gray-400 dark:border-gray-600 my-3 rounded-lg">
+                                <div class="bg-main rounded-lg shadow-md">
                                     <div class="relative flex flex-col p-3 lg:p-8 gap-2">
-
                                         <div class="flex items-center gap-3">
                                             <img class="object-cover w-9" src="/assets/logo/digitalent.png"
                                                 alt="Digitalent" title="Digitalent">
                                             <div class="flex flex-col justify-between">
-                                                <p class="text-sm font-semibold">
+                                                <span class="text-sm text-cyan-600 font-semibold">
                                                     Juli - September 2022
-                                                </p>
+                                                </span>
                                                 <h4 class="text-lg lg:text-xl font-semibold">
                                                     (BNSP) KOMINFO - Digitalent
                                                 </h4>
@@ -401,7 +396,7 @@
                                             </div>
                                         </div>
                                         <h6 class="font-semibold">Unit kompetensi</h6>
-                                        <ul class="list-disc list-outside ps-4">
+                                        <ul class="list-disc list-outside ps-4 font-light">
                                             <li>Mengimplementasikan User Interface</li>
                                             <li>Menerepkan perintah eksekusi bahasa pemrograman berbasis teks,
                                                 grafis, multimedia</li>
@@ -413,13 +408,12 @@
                                             </li>
                                             <li>Menggunakan library atau komponen pre-existing</li>
                                         </ul>
-                                        <button data-modal-open="certificate" id="open"
-                                            class="open-modal ms-auto sm:absolute top-3 right-3 btn-primary-outline">
+                                        <button data-modal-open="certificate"
+                                            class="open-modal ms-auto sm:absolute top-6 right-6 btn-primary-outline">
                                             <span>Lihat</span>
                                         </button>
-
                                         <div data-modal="certificate"
-                                            class="modal fixed w-screen h-screen inset-0 bg-gray-900/70 z-50 overflow-hidden hidden transition-opacity">
+                                            class="modal fixed w-screen h-screen inset-0 bg-gray-900/70 z-50 overflow-hidden hidden">
                                             <div class="h-full overflow-y-scroll relative px-3 py-8">
                                                 <button
                                                     class="close-modal m-4 fixed top-0 right-1 bg-gray-200 hover:bg-cyan-600 rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-black shadow"
@@ -440,16 +434,13 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </article>
-
             </div>
-
         </section>
 
         <section id="contact" class="min-h-screen relative flex items-center snap-start">
@@ -475,7 +466,7 @@
                         <span class="relative invisible">Kirim pesan</span>
                     </button>
                     <div data-modal="message"
-                        class="modal hidden fixed w-screen h-screen inset-0 grid place-content-center bg-gray-900/70 z-50 overflow-hidden transition-opacity">
+                        class="modal hidden fixed w-screen h-screen inset-0 place-content-center bg-gray-900/70 z-50 overflow-hidden">
                         <div class="bg-gray-200 dark:bg-gray-800 lg:w-full rounded-lg p-8">
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl font-semibold">Kirim Pesan</h3>
@@ -490,10 +481,9 @@
                             </div>
                             <form action="https://formsubmit.co/irhmdhn.me@gmail.com" method="POST"
                                 class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mt-6 mx-auto">
-
                                 <div>
                                     <label for="name" class="block text-sm mb-2">
-                                        Nama
+                                        Nama <span class="text-red-600">*</span>
                                     </label>
                                     <div>
                                         <input type="text" name="name" id="name" autoComplete="name" class="form-field"
@@ -502,7 +492,7 @@
                                 </div>
                                 <div>
                                     <label for="email" class="block text-sm mb-2">
-                                        Email
+                                        Email <span class="text-red-600">*</span>
                                     </label>
                                     <div>
                                         <input type="email" name="email" id="email" autoComplete="email"
@@ -511,7 +501,7 @@
                                 </div>
                                 <div class="sm:col-span-2">
                                     <label for="subject" class="block text-sm mb-2">
-                                        Subjek
+                                        Subjek <span class="text-red-600">*</span>
                                     </label>
                                     <div>
                                         <input type="text" name="subject" id="subject" autoComplete="subject"
@@ -520,7 +510,7 @@
                                 </div>
                                 <div class="sm:col-span-2">
                                     <label for="message" class="block text-sm mb-2">
-                                        Pesan
+                                        Pesan <span class="text-red-600">*</span>
                                     </label>
                                     <div>
                                         <textarea name="message" id="message" rows=3 class="form-field" required>
@@ -528,7 +518,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-6 sm:col-span-2">
-                                    <button type="submit" class="btn-primary float-right">
+                                    <button type="submit" class="btn-primary float-right flex">
                                         <i class="bx bx-paper-plane text-2xl"></i>
                                     </button>
                                 </div>
@@ -536,42 +526,42 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="relative flex py-5 items-center">
                     <div class="flex-grow border-t border-gray-400"></div>
                     <span class="flex-shrink text-gray-400 mx-2 sm:mx-3">Atau</span>
                     <div class="flex-grow border-t border-gray-400"></div>
                 </div>
-                <div class="grid grid-cols-2 gap-3 text-gray-600 dark:text-gray-400">
+                <div class="grid grid-cols-2 gap-3 text-secondary">
                     <a target="_blank" href="https://www.instagram.com/irhmdhn/"
-                        class="flex gap-2 items-center outline outline-1 outline-gray-400 dark:outline-none dark:bg-gray-800 rounded-lg p-4 hover:text-gray-200 hover:outline-none hover:bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+                        class="flex gap-2 items-center bg-main shadow-md rounded-lg p-4 hover:text-gray-200 hover:bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
                         <i class='bx bxl-instagram rounded text-xl sm:text-2xl'></i>
                         <span class="text-sm sm:text-base">Instagram</span>
                     </a>
                     <a target="_blank" href="https://www.linkedin.com/in/irhmdhn"
-                        class="flex gap-2 items-center outline outline-1 outline-gray-400 dark:outline-none dark:bg-gray-800 rounded-lg p-4 hover:text-gray-200 hover:outline-none hover:bg-[#0a66c2] dark:hover:bg-[#0a66c2]">
+                        class="flex gap-2 items-center bg-main shadow-md rounded-lg p-4 hover:text-gray-200 hover:bg-[#0a66c2] dark:hover:bg-[#0a66c2]">
                         <i class='bx bxl-linkedin rounded text-xl sm:text-2xl'></i>
                         <span class="text-sm sm:text-base">LinkedIn</span>
                     </a>
                     <a target="_blank" href="https://github.com/irhmdhn"
-                        class="flex gap-2 items-center outline outline-1 outline-gray-400 dark:outline-none dark:bg-gray-800 rounded-lg p-4 hover:text-gray-200 hover:outline-none hover:bg-[#171515] dark:hover:bg-[#171515]">
+                        class="flex gap-2 items-center bg-main shadow-md rounded-lg p-4 hover:text-gray-200 hover:bg-[#171515] dark:hover:bg-[#171515]">
                         <i class='bx bxl-github rounded text-xl sm:text-2xl'></i>
                         <span class="text-sm sm:text-base">GitHub</span>
                     </a>
                     <a target="_blank" href="mailto:irhmdhn.me@gmail.com"
-                        class="flex gap-2 items-center outline outline-1 outline-gray-400 dark:outline-none dark:bg-gray-800 rounded-lg p-4 hover:text-gray-200 hover:outline-none hover:bg-red-500 dark:hover:bg-red-500">
+                        class="flex gap-2 items-center bg-main shadow-md rounded-lg p-4 hover:text-gray-200 hover:bg-red-500 dark:hover:bg-red-500">
                         <i class='bx bx-envelope rounded text-xl sm:text-2xl'></i>
                         <span class="text-sm sm:text-base">Email</span>
                     </a>
                 </div>
-
                 <footer class="text-secondary text-center my-3 absolute bottom-0 inset-x-0">
                     Copyright &copy; 2023 irhmdhn
                 </footer>
             </div>
         </section>
     </main>
+
     <script type="module" src="/src/main.js"></script>
+
 </body>
 
 </html>
